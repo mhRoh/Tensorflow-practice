@@ -68,6 +68,8 @@ if __name__ == '__main__':
     #이미 알겠지만 W, b에 따라서 xy 평면에 그려지는 line의 기울기가 변한다. 즉 learning_rate는 이 기울기가
     #변화되는 폭을 정한다고 볼 수 있다.
 
+    # Gradient Descent Optimizer는 W = W - tf.mul(0.001, cost(constfunc*X)) 를 내부에서 수행한다.
+
     optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.001)
     train = optimizer.minimize(cost)
 
